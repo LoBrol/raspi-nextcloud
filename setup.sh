@@ -51,13 +51,13 @@ ipv4.method "manual"
 
 # --- Setting up NANO ---
 sudo rm /etc/nanorc
-sudo wget https://raw.githubusercontent.com/LoBrol/ubuntu-nextcloud/main/file_to_be_copied/nanorc -P /etc/
+sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/nanorc -P /etc/
 
 
 
 # --- Setting up MOTD ---
 sudo chmod -x /etc/update-motd.d/10-uname
-sudo wget https://raw.githubusercontent.com/LoBrol/ubuntu-nextcloud/main/file_to_be_copied/20-neofetch -P /etc/update-motd.d/
+sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/20-neofetch -P /etc/update-motd.d/
 sudo chmod +x /etc/update-motd.d/20-neofetch
 
 
@@ -71,8 +71,8 @@ echo "Y Y Y" | sudo sensors-detect
 echo "N exit" | sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 rm .zshrc
-wget https://raw.githubusercontent.com/LoBrol/ubuntu-nextcloud/main/file_to_be_copied/.zshrc
-wget https://raw.githubusercontent.com/LoBrol/ubuntu-nextcloud/main/file_to_be_copied/.p10k.zsh
+wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/.zshrc
+wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/.p10k.zsh
 chsh -s /bin/zsh
 
 
@@ -107,11 +107,11 @@ sudo rm /var/www/html/latest.zip
 sudo chown -R www-data:www-data /var/www/html/nextcloud
 sudo chown -R www-data:www-data /mnt/NFS
 
-sudo wget https://raw.githubusercontent.com/LoBrol/ubuntu-nextcloud/main/file_to_be_copied/nextcloud.conf -P /etc/apache2/sites-available/
-sudo wget https://raw.githubusercontent.com/LoBrol/ubuntu-nextcloud/main/file_to_be_copied/nextcloud_ssl.conf -P /etc/apache2/sites-available/
+sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/nextcloud.conf -P /etc/apache2/sites-available/
+sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/nextcloud_ssl.conf -P /etc/apache2/sites-available/
 
 sudo rm /etc/apache2/apache2.conf
-sudo wget https://raw.githubusercontent.com/LoBrol/ubuntu-nextcloud/main/file_to_be_copied/apache2.conf -P /etc/apache2/
+sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/apache2.conf -P /etc/apache2/
 
 sudo a2ensite nextcloud.conf
 sudo a2ensite nextcloud_ssl.conf
