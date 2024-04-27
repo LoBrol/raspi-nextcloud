@@ -9,7 +9,13 @@ HOST_SUBNET="32"
 HOST_GATEWAY="x.x.x.x"
 
 NFS_IP="x.x.x.x"
-NFS_PATH="folder/folder/folder"
+NFS_PATH="/folder/folder/folder"
+
+MYSQL_USER="root"
+MYSQL_PASSWORD=""
+
+NEXTCLOUD_USER="nextcloud"
+NEXTCLOUD_PASSWORD="nextcloud"
 
 
 
