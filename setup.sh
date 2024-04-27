@@ -109,6 +109,7 @@ sudo chown -R www-data:www-data /mnt/NFS
 
 sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/nextcloud.conf -P /etc/apache2/sites-available/
 sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/nextcloud_ssl.conf -P /etc/apache2/sites-available/
+sudo rm /etc/apache2/site-enabled/000-default.conf
 
 sudo rm /etc/apache2/apache2.conf
 sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/apache2.conf -P /etc/apache2/
