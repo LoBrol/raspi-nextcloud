@@ -56,6 +56,7 @@ sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_
 
 
 # --- Setting up MOTD ---
+sudo rm /etc/motd
 sudo chmod -x /etc/update-motd.d/10-uname
 sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/20-neofetch -P /etc/update-motd.d/
 sudo chmod +x /etc/update-motd.d/20-neofetch
