@@ -87,7 +87,7 @@ sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_
 sudo sed -i 's/x.x.x.x/'${NFS_IP}'/g' /opt/nfs_mount.sh
 sudo sed -i 's@folder@'${NFS_PATH}'@g' /opt/nfs_mount.sh
 sudo chmod +x /opt/nfs_mount.sh
-cron_line="*/5 * * * * /opt/nfs_mount.sh"
+cron_line="*/5 * * * * root /opt/nfs_mount.sh"
 echo $cron_line | sudo tee -a /etc/crontab
 
 
