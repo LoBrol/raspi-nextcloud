@@ -83,6 +83,10 @@ sudo apt install -y nfs-common
 sudo mkdir /mnt/NFS
 sudo mount ${NFS_IP}:${NFS_PATH} /mnt/NFS
 echo "${NFS_IP}:${NFS_PATH} /mnt/NFS nfs defaults 0 0" | sudo tee -a /etc/fstab
+sudo wget https://raw.githubusercontent.com/LoBrol/raspi-nextcloud/main/file_to_be_copied/nfs_mount.sh -P /opt/
+sudo sed -i 's/x.x.x.x/'${NFS_IP}'/g' /opt/nfs_mount.sh
+sudo sed -i 's/folder/'${NFS_PATH}'/g' /opt/nfs_mount.sh
+sudo chmod +x /opt/nfs_mount.sh
 
 
 
